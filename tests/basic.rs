@@ -1,6 +1,4 @@
-use tensor_algebra_in_rust::error::TensorError;
-use tensor_algebra_in_rust::tensor::{Matrix, Tensor};
-use tensor_algebra_in_rust::vector;
+use tensor_algebra_in_rust::{prelude::*, vector};
 
 #[test]
 fn vector_elementwise_ops_and_scalar_ops() {

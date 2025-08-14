@@ -1,11 +1,4 @@
-use std::fmt::Display;
-use tensor_algebra_in_rust::tensor::{AllowedNumericTypes, Vector};
-use tensor_algebra_in_rust::vector;
-
-fn format_vector<T: Display + AllowedNumericTypes, const N: usize>(a: &Vector<T, N>) -> String {
-    let elems: Vec<String> = a.iter().map(|x| format!("{}", x)).collect();
-    format!("[{}]", elems.join(", "))
-}
+use tensor_algebra_in_rust::{matrix, vector};
 
 fn main() {
     let a = vector![1, 2, 3, 4];
@@ -19,11 +12,11 @@ fn main() {
 
     let dot = a.dot(&b);
 
-    println!("vector a = {}", format_vector(&a));
-    println!("vector b = {}", format_vector(&b));
-    println!("a + b   = {}", format_vector(&sum));
-    println!("a * b   = {}", format_vector(&prod));
-    println!("3 * a   = {}", format_vector(&scaled));
-    println!("a + 10  = {}", format_vector(&shifted));
+    println!("vector a = {}", a);
+    println!("vector b = {}", b);
+    println!("a + b   = {}", sum);
+    println!("a * b   = {}", prod);
+    println!("3 * a   = {}", scaled);
+    println!("a + 10  = {}", shifted);
     println!("a · b   = {}", dot);
 }

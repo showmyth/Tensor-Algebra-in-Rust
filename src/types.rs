@@ -38,7 +38,7 @@ pub trait AllowedNumericTypes:
     fn from_f64(n: f64) -> Option<Self>;
 }
 
-// Implementations for primitive numeric types are provided in `tensor_impl.rs`.
+// Implementations for primitive numeric types are provided in `numerics.rs`.
 
 /// A fixed-size 1-D vector of length `N` backed by `[T; N]`.
 #[derive(Clone, Debug, PartialEq)]
@@ -62,4 +62,4 @@ pub struct Tensor<T: AllowedNumericTypes, const N: usize> {
     pub(crate) depths: usize,
     pub(crate) rows: usize,
 }
-// Implementations for methods and operator traits are provided in `tensor_impl.rs`.
+// Implementations for methods and operator traits are provided in `{container_type}.rs`.

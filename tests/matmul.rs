@@ -3,10 +3,10 @@ use tensor_algebra_in_rust::{matrix, prelude::*, vector};
 #[test]
 fn i32_basic() {
     // A: 2x3
-    let a = Matrix::<i32, 3>::from_vectors(vec![vector![1, 2, 3], vector![4, 5, 6]]);
+    let a = matrix![1, 2, 3; 4, 5, 6];
 
     // B: 3x2
-    let b = Matrix::<i32, 2>::from_vectors(vec![vector![7, 8], vector![9, 10], vector![11, 12]]);
+    let b = matrix![7, 8; 9, 10; 11, 12];
 
     // C = A * B: 2x2
     let c = (&a * &b).unwrap();
