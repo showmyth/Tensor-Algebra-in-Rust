@@ -6,8 +6,8 @@
 //! # Examples
 //!
 //! ```
-//! use tensor_lib::{vector, matrix};
-//! use tensor_lib::types::{Vector, Matrix};
+//! use tensor_algebra_in_rust::{vector, matrix};
+//! use tensor_algebra_in_rust::types::{Vector, Matrix};
 //!
 //! // Create a vector
 //! let v = vector![1, 2, 3];

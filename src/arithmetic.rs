@@ -7,7 +7,7 @@
 //! # Examples
 //!
 //! ```
-//! use tensor_lib::matrix;
+//! use tensor_algebra_in_rust::matrix;
 //!
 //! let a = matrix![[1.0, 2.0]; [3.0, 4.0]];
 //! let b = matrix![[5.0, 6.0]; [7.0, 8.0]];
